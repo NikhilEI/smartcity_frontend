@@ -1,0 +1,13 @@
+.media-partners-height{ height:1500px;}
+.partners-height{ height:1350px;}
+.support-partners-height{ height:800px;}
+.event-partner-height{ height:600px;}
+.supporting-associations-height{ height:2300px;}
+
+@media (max-width: 767px) { 
+.media-partners-height{ height:3200px;}
+.partners-height{ height:3500px;}
+.support-partners-height{ height:1350px;}
+.event-partner-height{ height:300px;}
+.supporting-associations-height{ height:3400px;}
+}
