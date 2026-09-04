@@ -43,17 +43,12 @@ export default function HomeEffects() {
       () => {
         const $ = window.jQuery!;
 
-        $(".owl-carousel").owlCarousel({
-          loop: true,
-          margin: 10,
-          responsiveClass: true,
-          responsive: {
-            0: { items: 1, nav: true },
-            600: { items: 3, nav: false },
-            1000: { items: 4, nav: true, loop: false, margin: 20 },
-          },
-        });
-
+        // Original site order: the generic `.owl-carousel` init is registered via
+        // $(document).ready(), which jQuery defers to a microtask — so it actually
+        // *runs after* the specific per-ID inits below, which execute as plain
+        // synchronous script. Since owlCarousel() is a no-op on an already-initialized
+        // element, whichever call runs first wins; the specific configs must go first
+        // or every named carousel silently falls back to the generic 4-item layout.
         $("#banner-top-carousel").owlCarousel({
           loop: true,
           margin: 30,
@@ -156,6 +151,19 @@ export default function HomeEffects() {
             600: { items: 3 },
             1000: { items: 5 },
             1400: { items: 6 },
+          },
+        });
+
+        // Generic fallback for any other `.owl-carousel` element not covered by a
+        // specific selector above (matches original's deferred $(document).ready order).
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          responsiveClass: true,
+          responsive: {
+            0: { items: 1, nav: true },
+            600: { items: 3, nav: false },
+            1000: { items: 4, nav: true, loop: false, margin: 20 },
           },
         });
       }

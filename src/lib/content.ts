@@ -30,6 +30,16 @@ export function getHomeExtraStyle(): string {
   return fs.readFileSync(path.join(CONTENT_DIR, "pages", "home-extra-style.css"), "utf8");
 }
 
+/**
+ * These 4 pages originally embedded a fully separate standalone HTML document
+ * via <iframe> (its own <head>, no site header/footer). Ported here inlined
+ * directly into the page instead of an iframe (same visual output, no nested
+ * scrollbar, works with the shared layout).
+ */
+export function getIframedContentHtml(slug: string): string {
+  return fs.readFileSync(path.join(CONTENT_DIR, "pages", `${slug}-content.html`), "utf8");
+}
+
 export function getHeaderHtml(): string {
   return fs.readFileSync(path.join(CONTENT_DIR, "header.html"), "utf8");
 }
