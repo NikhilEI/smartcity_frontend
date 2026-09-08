@@ -835,7 +835,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00fefc", endC
 
 .gal-item{overflow: hidden; padding: 3px; }
 .glimpses-home-box {width: 100%; height: auto; float: left; margin-bottom: 2px;}
-.glimpses-home-box img {width: 100%;}
+.glimpses-home-box img {width: 100%; height: auto;}
 
 .contact-city-heading{width: 100%; height: auto; float:left; font-size:18px; color:#012121; font-weight:700;  margin-bottom:15px;}
 .contact-para-box{width: 100%; height: auto; float:left;  font-size:16px; font-weight:500; margin-bottom:15px;}
