@@ -593,6 +593,15 @@ background: linear-gradient(180deg, rgba(0, 254, 252, 1) 0%, rgba(255, 255, 255,
 .footer-logo-box img{max-width: 100%;}
 .footer-left-border{border-left:1px solid #040231;}
 .footer-left-border hr{border-top-color: #040231; opacity: 1;}
+.footer-organisers-col{border-left:1px solid #040231;}
+.footer-social-icons{width: 100%; height: auto; float: left; text-align: center;}
+.footer-social-icons ul{list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0;}
+.footer-social-icons ul li a{display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #040231; color: #fff; font-size: 16px; text-decoration: none; transition: all .3s ease-in-out;}
+.footer-social-icons ul li a[href*='instagram']:hover{background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);}
+.footer-social-icons ul li a[href*='facebook']:hover{background: #3b5998;}
+.footer-social-icons ul li a[href*='linkedin']:hover{background: #0077B5;}
+.footer-social-icons ul li a[href*='youtube']:hover{background: #c4302b;}
+.footer-social-icons ul li a[href*='twitter']:hover{background: #00acee;}
 .footer-section-bottom{background:#00fefc;}
 .footer-copyright{font-size:13px; color:#555555; padding:5px 0; text-align:center;}
 
@@ -959,6 +968,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00fefc", endC
 .header-scroll .logo-box-ci{width: 130px; /*margin-left: 15px;*/}
 	.ci-news-heading{font-size: 30px;}
 	.footer-left-border {border-left:0px solid #040231;}
+	.footer-organisers-col {border-left:0px solid #040231;}
 	.home-banner-bottom ul li:nth-last-child(4) {background: none;}
 .home-banner-bottom ul li:nth-last-child(7) {background: none;}
 
